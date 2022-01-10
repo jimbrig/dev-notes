@@ -1,0 +1,39 @@
+[
+  {
+    "name": "config",
+    "color": "#8ed92e",
+    "description": "Configuration and meta-infrastructural changes."
+  },
+  {
+    "name": "bug",
+    "color": "#d73a4a",
+    "description": "Something is not working."
+  },
+  {
+    "name": "docs",
+    "color": "#0075ca",
+    "description": "Improvements or additions to documentation"
+  },
+  {
+    "name": "feature",
+    "color": "#1B6659",
+    "description": "New enhancements and features"
+  },
+  {
+    "name": "release",
+    "color": "#108a51",
+    "description": "Setting up for a new release."
+  },
+  {
+    "name": "duplicate",
+    "color": "#cfd3d7",
+    "description": "Duplicated issue."
+  },
+  { "name": "data", "color": "#FAA631", "description": "Data related." },
+  {
+    "name": "CICD",
+    "color": "#d876e3",
+    "description": "DevOps related issues for CI/CD pipelines."
+  },
+  { "name": "help", "color": "#008672", "description": "Help wanted" }
+]
