@@ -1,0 +1,34 @@
+name: Index Directories
+on:
+  push:
+    branches: [ main ]
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: DaanV2/Markdown-Action-Create-Indexes@v1.5.13
+        with: 
+          folder: ${{github.workspace}}
+      - name: Commit changes
+        continue-on-error: true
+        run: |
+          cd ${{github.workspace}}
+          git config --global user.email "jimmy.briggs@jimbrig.com"
+          git config --global user.name "Jimmy Briggs"
+          git add .
+          git commit -m "auto: Generated markdown indexes"
+          git push
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
